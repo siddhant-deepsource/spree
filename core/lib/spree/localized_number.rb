@@ -4,7 +4,7 @@ module Spree
     def self.parse(number)
       return number unless number.is_a?(String)
 
-      separator, delimiter = I18n.t([:'number.currency.format.separator', :'number.currency.format.delimiter'])
+      separator, = I18n.t([:'number.currency.format.separator', :'number.currency.format.delimiter'])
       non_number_characters = /[^0-9\-#{separator}]/
 
       # work on a copy, prevent original argument modification

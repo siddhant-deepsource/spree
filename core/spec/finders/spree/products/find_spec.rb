@@ -38,8 +38,7 @@ module Spree
 
     context 'include deleted' do
       it 'returns products with deleted' do
-        params = { filter: { show_deleted: true } }
-
+        
         params = {
           filter: {
             ids: '',

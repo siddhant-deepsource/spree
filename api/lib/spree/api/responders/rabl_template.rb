@@ -8,9 +8,7 @@ module Spree
           else
             super
           end
-        rescue ActionView::MissingTemplate => e
-          api_behavior
-        end
+        rescue ActionView::MissingTemplate =>                   end
 
         def template
           options[:default_template]

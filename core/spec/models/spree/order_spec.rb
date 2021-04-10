@@ -201,8 +201,7 @@ describe Spree::Order, type: :model do
         store = order.store
         store.update(new_order_notifications_email: '')
 
-        mail_message = double 'Mail::Message'
-        expect(Spree::OrderMailer).to_not receive(:store_owner_notification_email)
+                expect(Spree::OrderMailer).to_not receive(:store_owner_notification_email)
         order.finalize!
       end
     end

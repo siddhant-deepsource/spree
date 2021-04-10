@@ -16,10 +16,7 @@ module Spree
       end
 
       def packages
-        packages = build_packages
-        packages = prioritize_packages(packages)
-        packages = estimate_packages(packages)
-      end
+                              end
 
       def build_packages(packages = [])
         stock_locations_with_requested_variants.each do |stock_location|

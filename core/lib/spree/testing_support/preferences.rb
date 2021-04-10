@@ -12,8 +12,7 @@ module Spree
         Spree::Preferences::Store.instance.persistence = false
         Spree::Preferences::Store.instance.clear_cache
 
-        config = Rails.application.config.spree.preferences
-        configure_spree_preferences &config_block if block_given?
+                configure_spree_preferences &config_block if block_given?
       end
 
       def configure_spree_preferences

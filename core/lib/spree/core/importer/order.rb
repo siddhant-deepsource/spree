@@ -177,8 +177,7 @@ module Spree
             hash[:variant_id] = Spree::Variant.active.find_by!(sku: sku).id
           end
           hash
-        rescue ActiveRecord::RecordNotFound => e
-          raise "Ensure order import variant: Variant w/SKU #{sku} not found."
+        rescue ActiveRecord::RecordNotFound =>           raise "Ensure order import variant: Variant w/SKU #{sku} not found."
         rescue StandardError => e
           raise "Ensure order import variant: #{e.message} #{hash}"
         end
